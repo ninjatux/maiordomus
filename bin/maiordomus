@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+// TODO: refactor exit statuses
+
+var path = require('path'),
+    fs = require('fs');
+
+var WORKING_DIR = process.cwd();
+var MAIORDUMUS_FOLDER = path.resolve(WORKING_DIR, 'maiordomus');
+
+var args = process.argv.slice(2);
+if(!args.length || args.length < 2) {
+    console.log('usage: maiordomus env task [step]\n');
+    process.exit(1);
+}
+
+/* check if config file exists */
+var configPath = path.resolve(MAIORDUMUS_FOLDER, 'config.js');
+var configExist = fs.existsSync(configPath);
+
+if(!configExist) {
+    console.error('maiordomus error: config file not found');
+    process.exit(1);
+}
+
+/* check if env exists in config */
+var environment = args[0];
+var config = require(configPath);
+
+if(!config.environments || !config.environments[environment]) {
+    console.error('maiordomus error: environment is not defined in config file');
+    process.exit(1);
+}
+
+/* check if task exists */
+var task = args[1] ? args[1] : null;
+var taskPath = path.resolve(MAIORDUMUS_FOLDER, task + '.js');
+var taskExist = fs.existsSync(taskPath);
+
+if(!taskExist) {
+    console.error('maiordomus error: task ' + args[1] + ' not found');
+    process.exit(1);
+}
+
+require(taskPath).start(config, environment, task, args[2] || undefined);;

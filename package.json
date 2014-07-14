@@ -1,0 +1,15 @@
+{
+  "name": "maiordomus",
+  "description": "Deploy tool based on Git",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ninjatux/maiordomus.git"
+  },
+  "dependencies": {
+    "bluebird": "^2.2.1",
+    "colors": "^0.6.2",
+    "lodash": "^2.4.1",
+    "nodegit": "^0.1.4"
+  }
+}
