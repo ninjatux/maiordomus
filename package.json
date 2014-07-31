@@ -7,9 +7,9 @@
     "url": "git@bitbucket.org:ninjatux/maiordomus.git"
   },
   "dependencies": {
-    "bluebird": "^2.2.1",
+    "bluebird": "^2.2.2",
     "colors": "^0.6.2",
     "lodash": "^2.4.1",
-    "nodegit": "^0.1.4"
+    "ssh2": "^0.3.4"
   }
 }

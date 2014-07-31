@@ -42,4 +42,4 @@ if(!taskExist) {
     process.exit(1);
 }
 
-require(taskPath).start(config, environment, task, args[2] || undefined);;
+require(taskPath).$start(config, environment, task, args[2] || undefined);;
