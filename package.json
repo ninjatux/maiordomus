@@ -1,10 +1,25 @@
 {
   "name": "maiordomus",
-  "description": "Deploy tool based on Git",
+  "description": "Multiple remote server management tool",
   "version": "0.0.1",
-  "repository": {
-    "type": "git",
-    "url": "git@bitbucket.org:ninjatux/maiordomus.git"
+  "homepage": "https://github.com/NinjaTux/maiordomus",
+  "repository": "ninjatux/maiordomus",
+  "author": "NinjaTux <valerio.barrila@gmail.com>",
+  "tags": [
+    "deploy",
+    "ssh",
+    "system",
+    "remote",
+    "connection",
+    "task"
+  ],
+  "files": [
+    "index.js",
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "maiordomus": "./bin/maiordomus"
   },
   "dependencies": {
     "bluebird": "^2.2.2",
