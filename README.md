@@ -2,7 +2,7 @@
 **Maiordomus** allow to define multiple operation flows that can be executed locally or on one or many remote machines simultaneously.
 Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-examples) for real world examples.
 
-<img src="https://raw.github.com/ninjatux/maiorodmus/master/example.png" alt="screenshot" />
+<img src="https://raw.githubusercontent.com/NinjaTux/maiordomus/master/screenshot.png" alt="screenshot" />
 
 ##Requirements
 To run it needs OpenSSH and node in the local machine and an OpenSSH server in the remote ones.
