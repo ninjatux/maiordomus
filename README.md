@@ -10,7 +10,7 @@ Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-e
 To run it needs OpenSSH and node in the local machine and an OpenSSH server in the remote ones.
 
 ##Install
-`npm install -g maiorodmus`
+`npm install -g maiordomus`
 
 ##Usage
 Maiordomus can be launched from the command using the following arguments:
