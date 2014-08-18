@@ -129,11 +129,11 @@ environment specific ```variables``` object.
 Currently Maiordomus provide different API if it's used inside an action or inside the body of a task.
 Inside a task it just provide the **step** method that allow you to define a list of steps, all the other methods are available inside the actions
 
-* **step(stepName, actions)**, defines a step of a task. Every step needs to have a name and a list of one or more actions defined
-* **log(message)**, output ```message``` on the current console.
-* **connect(_logMessage_)**, opens an SSH connection to all the hosts configured for the current environment. If *logMessage* is passed it will be printed before starting the connection attempt.
-* **disconnect(_logMessage_)**, close all the current SSH connections opened with the current environment hosts.  If *logMessage* is passed it will be printed before starting the disconnect attempt.
-* **exec(command)**, execute the given command on the remote machines or on the local one if no connections are openend. Eg:
+* **step (stepName, actions)**, defines a step of a task. Every step needs to have a name and a list of one or more actions defined
+* **log (message)**, output ```message``` on the current console.
+* **connect (_logMessage_)**, opens an SSH connection to all the hosts configured for the current environment. If *logMessage* is passed it will be printed before starting the connection attempt.
+* **disconnect (_logMessage_)**, close all the current SSH connections opened with the current environment hosts.  If *logMessage* is passed it will be printed before starting the disconnect attempt.
+* **exec (command)**, execute the given command on the remote machines or on the local one if no connections are openend. Eg:
 
 ```js
 function mixedExecute() {
@@ -150,6 +150,6 @@ function mixedExecute() {
         .done();
 }
 ```
-* **get(remotePath, localPath, _logMessage_)**, download a remote file located in a *remotePath* to *localPath* using an SFTP connection. If *logMessage* is passed it will be printed before the download attempt.
-* **put(localPath, remotePath, _logMessage_)**, upload a local file located in *localPath* to *remotePath* on remote machines. If *logMessage* is passed it will be printed before the download attempt.
-* **done(_logMessage_)**, close the current action flow. **Must be called** in order to let *Maiordomus* know that the flow is terminated. If *logMessage* is passed it will be printed instead of the default ```Done``` message.
+* **get (remotePath, localPath, _logMessage_)**, download a remote file located in a *remotePath* to *localPath* using an SFTP connection. If *logMessage* is passed it will be printed before the download attempt.
+* **put (localPath, remotePath, _logMessage_)**, upload a local file located in *localPath* to *remotePath* on remote machines. If *logMessage* is passed it will be printed before the download attempt.
+* **done (_logMessage_)**, close the current action flow. **Must be called** in order to let *Maiordomus* know that the flow is terminated. If *logMessage* is passed it will be printed instead of the default ```Done``` message.
