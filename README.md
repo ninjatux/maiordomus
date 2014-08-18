@@ -1,10 +1,10 @@
 #STILL NOT PUBLISHED ON NPM
 
-<img src="https://raw.githubusercontent.com/NinjaTux/maiordomus/master/screenshot.png" alt="screenshot" />
-
 #Description
 **Maiordomus** is a command line application that allows to define multiple operation flows which can be executed locally or on one or many remote machines simultaneously.
 Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-examples) for real use case.
+
+<img src="https://raw.githubusercontent.com/NinjaTux/maiordomus/master/screenshot.png" alt="screenshot" />
 
 ##Requirements
 To run it needs OpenSSH and node in the local machine and an OpenSSH server in the remote ones.
