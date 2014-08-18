@@ -1,10 +1,10 @@
 #STILL NOT PUBLISHED ON NPM
 
-#Description
-**Maiordomus** is a command line application that allow to define multiple operation flows that can be executed locally or on one or many remote machines simultaneously.
-Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-examples) for real world examples.
-
 <img src="https://raw.githubusercontent.com/NinjaTux/maiordomus/master/screenshot.png" alt="screenshot" />
+
+#Description
+**Maiordomus** is a command line application that allows to define multiple operation flows which can be executed locally or on one or many remote machines simultaneously.
+Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-examples) for real use case.
 
 ##Requirements
 To run it needs OpenSSH and node in the local machine and an OpenSSH server in the remote ones.
@@ -15,7 +15,7 @@ To run it needs OpenSSH and node in the local machine and an OpenSSH server in t
 ##Usage
 Maiordomus can be launched from the command using the following arguments:
 
-* **environment**, mandatory, used to select the environment to work on. Environment must be present in the config file.
+* **environment**, mandatory, used to select the environment to work on. Environment must exist in the config file.
 * **task**, mandatory, used to choose wich task to perform on the given environment. Task must be defined in the maiordomus folder.
 * **step**, optional, used to specify wich step to execute, otherwise all the steps will be in the way they are defined.
 
@@ -32,7 +32,7 @@ myAwesomeWebApp
 ```
 
 ####Configuration file
-This is an example of configuration file:
+This is an example of a configuration file:
 
 ```js
 /* MaiorDomus configuration */
@@ -72,7 +72,7 @@ module.exports = {
 ```
 
 ####Tasks files
-Task are used to define one or more steps. Take a look at this simple task:
+Tasks are used to define one or more steps. Take a look at this simple task:
 
 ```js
 // Require maiordomus
@@ -118,18 +118,18 @@ function cleanLogs() {
 module.exports = geoffrey;
 ```
 
-The task is pretty self explanatory, check [this repo](https://github.com/NinjaTux/maiordomus-examples) for more real world examples.
-Actions needs to use the maiordomus API to let the main application manage the steps and actions flow in the right order.
+The task is pretty self explanatory, check [this repo](https://github.com/NinjaTux/maiordomus-examples) for more real use cases.
+Actions need to use the _Maiordomus API_ to let the main application manage the steps and the actions flow in the right order; **done** must be called always at the end of each action.
 
 ####Templating
 Maiorodmus uses the [lodash template syntax](http://lodash.com/docs#template) to enrich logs and commands passed to its API. It uses properties coming from the ```configuration.variables``` object extended with
 environment specific ```variables``` object.
 
 ##API
-Currently Maiordomus provide different API if it's used inside an action or inside the body of a task.
-Inside a task it just provide the **step** method that allow you to define a list of steps, all the other methods are available inside the actions
+Currently Maiordomus provides different API if it's used inside an action or inside the body of a task.
+Inside a task it just provides the **step** method that allow you to define a list of steps, all the other methods are available inside actions.
 
-* **step (stepName, actions)**, defines a step of a task. Every step needs to have a name and a list of one or more actions defined
+* **step (stepName, actions)**, defines a step of the task. Every step needs to have a name and a list of one or more actions defined.
 * **log (message)**, output ```message``` on the current console.
 * **connect (_logMessage_)**, opens an SSH connection to all the hosts configured for the current environment. If *logMessage* is passed it will be printed before starting the connection attempt.
 * **disconnect (_logMessage_)**, close all the current SSH connections opened with the current environment hosts.  If *logMessage* is passed it will be printed before starting the disconnect attempt.
@@ -150,6 +150,6 @@ function mixedExecute() {
         .done();
 }
 ```
-* **get (remotePath, localPath, _logMessage_)**, download a remote file located in a *remotePath* to *localPath* using an SFTP connection. If *logMessage* is passed it will be printed before the download attempt.
-* **put (localPath, remotePath, _logMessage_)**, upload a local file located in *localPath* to *remotePath* on remote machines. If *logMessage* is passed it will be printed before the download attempt.
-* **done (_logMessage_)**, close the current action flow. **Must be called** in order to let *Maiordomus* know that the flow is terminated. If *logMessage* is passed it will be printed instead of the default ```Done``` message.
+* **get (remotePath, localPath, _logMessage_)**, downloads a remote file located in a *remotePath* to *localPath* using an SFTP connection. If *logMessage* is passed it will be printed before the download attempt.
+* **put (localPath, remotePath, _logMessage_)**, uploads a local file located in *localPath* to *remotePath* on remote machines. If *logMessage* is passed it will be printed before the download attempt.
+* **done (_logMessage_)**, closes the current action flow. **Must be called** in order to let *Maiordomus* know that the flow is terminated. If *logMessage* is passed it will be printed instead of the default ```Done``` message.
