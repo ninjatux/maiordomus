@@ -94,7 +94,7 @@ function cleanLogs() {
 module.exports = geoffrey;
 ```
 
-The task is pretty self explanatory, check [this repo](https://github.com/NinjaTux/maiordomus-examples) for mora real world examples.
+The task is pretty self explanatory, check [this repo](https://github.com/NinjaTux/maiordomus-examples) for more real world examples.
+Actions needs to use the maiordomus API to let the main application manage the steps and actions flow in the right order.
 
-####Usage example
-With the task 
+##API
