@@ -98,3 +98,7 @@ The task is pretty self explanatory, check [this repo](https://github.com/NinjaT
 Actions needs to use the maiordomus API to let the main application manage the steps and actions flow in the right order.
 
 ##API
+Currently Maiordomus provide different API if it's used inside an action or inside the body of a task.
+Inside a task it just provide the **step** method that allow you to define a list of steps, all the other methods are available inside the actions
+
+###step(stepName *<String>*, actions *<Array>*)
