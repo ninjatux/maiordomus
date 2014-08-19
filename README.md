@@ -13,7 +13,7 @@ To run it needs OpenSSH and node in the local machine and an OpenSSH server in t
 `npm install -g maiordomus`
 
 ##Usage
-Maiordomus can be launched from the command using the following arguments:
+Maiordomus can be launched from the command line using the following arguments:
 
 * **environment**, mandatory, used to select the environment to work on. Environment must exist in the config file.
 * **task**, mandatory, used to choose wich task to perform on the given environment. Task must be defined in the maiordomus folder.
