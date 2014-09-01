@@ -1,17 +1,30 @@
 {
   "name": "maiordomus",
   "description": "Multiple remote server management tool",
-  "version": "0.0.1",
+  "keywords": [
+    "ssh",
+    "remote",
+    "server",
+    "management",
+    "devops",
+    "deploy",
+    "flow"
+  ],
+  "version": "0.1.0",
   "homepage": "https://github.com/NinjaTux/maiordomus",
   "repository": "ninjatux/maiordomus",
-  "author": "NinjaTux <valerio.barrila@gmail.com>",
-  "tags": [
-    "deploy",
-    "ssh",
-    "system",
-    "remote",
-    "connection",
-    "task"
+  "maintainers": [
+    {
+      "name": "Valerio Barrila",
+      "email": "valerio.barrila@gmail.com",
+      "web": "https://twitter.com/ninjatux2k"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
   ],
   "files": [
     "index.js",

@@ -1,5 +1,3 @@
-#STILL NOT PUBLISHED ON NPM
-
 #Description
 **Maiordomus** is a command line application that allows to define multiple operation flows which can be executed locally or on one or many remote machines simultaneously.
 Check the project [maiordomus-examples](https://github.com/NinjaTux/maiordomus-examples) for real use case.
